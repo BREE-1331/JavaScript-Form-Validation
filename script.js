@@ -1,0 +1,40 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementByld("registration-form");
+    const usernameInput = document.getElementByld("username");
+    const emailInput = document.getElementByld("email");
+    const passwordInput = document.getElementByld("password");
+    const confirmPasswordInput = document.getElementByld("confirm-password");
+
+                          
+form.addEventListener("submit", function (event) {
+    // Initialize and array to store error messages
+    const errors = [];
+
+    // Validation for username (minimum length of 3 characters)
+    if (usernameInput.value.length < 3) {
+        errors.push("Username must be at least 3 characters long.");
+    }
+
+    // Validation for email (must be a valid email format)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value)) {
+        errors.push("Please enter a valid email address.");
+    }
+
+    // Validation for password (minimum length of 6 characters)
+    if (passwordInput.value.length < 6) {
+        errors.push("Password must be at least 6 characters long.");
+    }
+
+    // Validation for password match
+    if (passwordInput.value !== confirmPasswordInput.value) {
+        errors.push("Passwords do not match.");
+    }
+
+    // If there are errors, prevent form submission and display them
+    if (errors.length > 0) {
+        event.preventDefault(); // Prevent form submission
+        alert(errors.join("\n")); // Display error messages in an alert
+    }
+});
+});
