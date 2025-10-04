@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementByld("registration-form");
-    const usernameInput = document.getElementByld("username");
-    const emailInput = document.getElementByld("email");
-    const passwordInput = document.getElementByld("password");
-    const confirmPasswordInput = document.getElementByld("confirm-password");
+    const form = document.getElementById("registration-form");
+    const usernameInput = document.getElementById("username");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+    const confirmPasswordInput = document.getElementById("confirm-password");
 
                           
 form.addEventListener("submit", function (event) {
