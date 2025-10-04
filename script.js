@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailInput = document.getElementById("email");
     const passwordInput = document.getElementById("password");
     const confirmPasswordInput = document.getElementById("confirm-password");
+    console.log("Validation script loaded");
 
                           
 form.addEventListener("submit", function (event) {
