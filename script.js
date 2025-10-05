@@ -36,6 +36,9 @@ form.addEventListener("submit", function (event) {
     if (errors.length > 0) {
         event.preventDefault(); // Prevent form submission
         alert(errors.join("\n")); // Display error messages in an alert
+    } else
+            event.preventDefault();
+            alert("You're Registered!");
     }
 });
 });
